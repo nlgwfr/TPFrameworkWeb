@@ -1,0 +1,69 @@
+h2 {
+  margin-bottom: 24px;
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.champ label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.champ input[type="text"],
+.champ input[type="number"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.champ input:focus {
+  outline: none;
+  border-color: #1565C0;
+}
+
+.erreur-champ {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  background-color: #1565C0;
+  color: white;
+}
+
+button[type="submit"]:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button[type="button"] {
+  background-color: #eee;
+  color: #333;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(0.9);
+}

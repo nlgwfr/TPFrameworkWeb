@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [NavbarComponent, RouterOutlet],
+  template: `
+    <app-navbar></app-navbar>
+    <main class="container">
+      <router-outlet></router-outlet>
+    </main>
+  `,
+  styles: [`.container { max-width: 1100px; margin: 80px auto 0; padding: 20px; }`]
 })
-export class App {
-  protected readonly title = signal('bibliotheque');
-}
+export class App {}
