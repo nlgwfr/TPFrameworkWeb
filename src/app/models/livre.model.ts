@@ -1,5 +1,5 @@
 export interface Livre {
-  id?: string | number;
+  id?: number;
   titre: string;
   auteur: string;
   annee: number;
